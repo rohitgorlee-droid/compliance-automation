@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ENC-001",
+    "description": "Storage must be encrypted at rest",
+    "resource_type": "storage",
+    "field": "encrypted",
+    "operator": "equals",
+    "expected": true,
+    "severity": "HIGH"
+  },
+  {
+    "id": "NET-001",
+    "description": "Resources must not be publicly accessible",
+    "field": "public_access",
+    "operator": "equals",
+    "expected": false,
+    "severity": "HIGH"
+  },
+  {
+    "id": "LOG-001",
+    "description": "Logging must be enabled",
+    "field": "logging_enabled",
+    "operator": "equals",
+    "expected": true,
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BKP-001",
+    "description": "Databases need at least 7 days of backups",
+    "resource_type": "database",
+    "field": "backup_retention_days",
+    "operator": "gte",
+    "expected": 7,
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "TAG-001",
+    "description": "Resources must have an owner tag",
+    "field": "owner",
+    "operator": "exists",
+    "expected": true,
+    "severity": "LOW"
+  }
+]

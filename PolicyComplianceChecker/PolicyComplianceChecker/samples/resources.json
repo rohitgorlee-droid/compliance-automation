@@ -1,0 +1,32 @@
+[
+  {
+    "name": "customer-data",
+    "type": "storage",
+    "encrypted": false,
+    "public_access": true,
+    "logging_enabled": true,
+    "owner": "data-team"
+  },
+  {
+    "name": "orders-db",
+    "type": "database",
+    "public_access": false,
+    "logging_enabled": false,
+    "backup_retention_days": 3,
+    "owner": "backend-team"
+  },
+  {
+    "name": "audit-archive",
+    "type": "storage",
+    "encrypted": true,
+    "public_access": false,
+    "logging_enabled": true,
+    "owner": "security-team"
+  },
+  {
+    "name": "web-server-01",
+    "type": "server",
+    "public_access": false,
+    "logging_enabled": true
+  }
+]
